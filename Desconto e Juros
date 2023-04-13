@@ -9,17 +9,16 @@ Código Condição de pagamento:
 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;*/
 
 const precoDoProduto = 100;
-const precoNoDinheiroPix = precoDoProduto - (precoDoProduto*(15/100));
-const precoNoDebito = precoDoProduto - (precoDoProduto*(10/100));
-const precoEm2 = precoDoProduto ;
-const meioDePagamento = ('Dinheiro');
+const meioDePagamento = 1;
 
-if (meioDePagamento === 'PIX' || meioDePagamento === 'Dinheiro') {
-    console.log('Você ganhou um desconto de 15%. Valor a ser pago:' + precoNoDinheiroPix);
-} else if (meioDePagamento === 'Débito') {
-    console.log('Você ganhou um desconto de 10%. Valor a ser pago:' + precoNoDebito);
-} else if (meioDePagamento === 'em 2x') {
-    console.log('Valor a ser pago:' + precoEm2);
-}   else {
-    console.log('Valor a ser pago:' + (precoDoProduto + (precoDoProduto*(10/100))));
+if (meioDePagamento === 1) {
+    console.log('Você ganhou um desconto de 10%. Valor a ser pago:' + (precoDoProduto - (precoDoProduto*0.1)));
+} else if (meioDePagamento === 2) {
+    console.log('Você ganhou um desconto de 15%. Valor a ser pago:' + (precoDoProduto - (precoDoProduto*0.15)));
+} else if (meioDePagamento === 3) {
+    console.log('Valor a ser pago:' + precoDoProduto);
+} else if (meioDePagamento === 4) {
+    console.log('Valor a ser pago:' + (precoDoProduto + (precoDoProduto*0.1)));
+} else {
+    console.log('Digite uma forma de pagamento válida.');
 }
