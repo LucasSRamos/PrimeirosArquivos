@@ -1,0 +1,23 @@
+  /* Evento para descobrir o valor gasto com cada tipo de combustível de acordo com o Combustível do carro e o km rodado. 
+  */
+
+const precoGasolina = 5.09;
+const precoEtanol = 3.99;
+const kmPorLitro = 10;
+const distanciaKm = 200;
+const combustivelDoCarro = ('Gasolina');
+
+if (combustivelDoCarro === 'Gasolina') {
+    const custoViagem = (distanciaKm / kmPorLitro) * precoGasolina;
+    console.log('O custo médio de Gasolina dessa viagem é de ' + custoViagem.toFixed(2) + ' reais.');
+}   
+    else if (combustivelDoCarro === 'Etanol') {
+    const custoViagem = (distanciaKm / kmPorLitro) * precoEtanol;
+    console.log('O custo médio de Etanol dessa viagem é de ' + custoViagem.toFixed(2) + ' reais.');
+}       
+    else {
+    console.log('O combustível informado não pode ser caulculado.');
+}
+
+
+
