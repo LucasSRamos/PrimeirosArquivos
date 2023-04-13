@@ -49,12 +49,13 @@ function classificarImc(imc) {
     }
 }
 
-function main() {
+//main
+(function() {
 
     const peso = 68;
     const altura = 1.76;
     const imc = peso / (altura*altura);
     console.log(classificarImc(imc));
-}
+})();
+// a função 'main' entre parenteses é resolvida e quando () no final, já é executada.
 
-main();
