@@ -27,3 +27,34 @@ if (imc < 18.5){
 }   else {  
     console.log('IMC=' + imc.toFixed(2) + ', o paciente está com obesidade grave.')
 }
+
+
+///AGORA USANDO FUNÇÕES
+
+function calcularImc(peso, altura) {
+    return peso / (altura * altura);
+}
+
+function classificarImc(imc) {
+    if (imc < 18.5) {
+        return 'IMC=' + imc.toFixed(2) + ', o paciente está abaixo do peso.'
+    } else if (imc > 18.5 && imc.toFixed(2) < 25) {
+        return 'IMC=' + imc.toFixed(2) + ', o paciente está no peso ideal.'
+    }   else if (imc > 25 && imc.toFixed(2) < 30) {
+        return 'IMC=' + imc.toFixed(2) + ', o paciente está acima do peso.'
+    }   else if (imc > 30 && imc.toFixed(2) < 40) {
+        return 'IMC=' + imc.toFixed(2) + ', o paciente está obeso.'
+    }   else {  
+        return 'IMC=' + imc.toFixed(2) + ', o paciente está com obesidade grave.'
+    }
+}
+
+function main() {
+
+    const peso = 68;
+    const altura = 1.76;
+    const imc = peso / (altura*altura);
+    console.log(classificarImc(imc));
+}
+
+main();
